@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>HTML Content Review</title>
+    <style>
+      div {
+        width: min(900px, 90%);
+        height: auto;
+        opacity: 0.9;
+      }
+      div.background{
+        position: relative;
+        border-radius: 18px;
+        background-color: #CAD4DF;
+        z-index: 2;
+        margin: 0 auto 36px auto;
+        padding: 24px;
+      }
+      body {
+        position: relative;
+        background: #FBFAF5;
+        z-index: -1;
+        margin: 0;
+        padding: 60px 0;
+      }
+      h1{
+        text-align: center;
+      }
+      p{
+        color: black;
+      }
+      .section-box{
+        border: 3px solid #EEC95C;
+        border-radius: 18px;
+        padding: 20px;
+        margin: 0 auto 36px auto;
+        background-color: #FBFAF5;
+        height: auto;
+      }
+      .subsection-box{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        border: 3px solid #D49A56;
+        border-radius: 18px;
+        padding: 20px;
+        margin: 12px auto 20px auto;
+        background-color: #DDDBDE;
+        height: auto;
+      }
+      .subsection-box pre{
+        margin: 0;
+        width: 100%;
+        white-space: pre-wrap;
+      }
+      .subsection-box code{
+        font-family: "Courier New", monospace;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="background">
+    <h1>Introduction to HTML</h1>
+    <p style="text-align: center;"><b>HTML</b> stands for <b>Hyper Text Markup Language</b>. It describes the structure of a Web page.</p>
+    <p style="text-align: center;">HTML consists of a series of elements, they tell the browser how to display the content.</p>
+    </div>
+
+    <div class="section-box">
+    <h1>A Sample HTML Document</h1>
+    <h3>Example</h3>
+      <div class="subsection-box">
+<pre>
+  <code>
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Webpage Title</title>
+    </head>
+    <body>
+      <h1>This is the First heading</h1>
+      <h2>This is the Second heading</h2>
+      <p>This is a paragraph</p>
+    </body>
+  </html>
+  
+  </code>
+</pre>
+      </div>
+    <h3 style="color: #866C69;">Note:</h3>
+      <ul style="color: #866C69;">
+        <li>The <b>&lt;!DOCTYPE html&gt;</b> declaration defines that this document is a HTML document.</li>
+        <li>The <b>&lt;html&gt;</b> element is the root element of an HTML page.</li>
+        <li>The <b>&lt;head&gt;</b> element contains meta information about the HTML page NOT shown to users.</li>
+        <li>The <b>&lt;title&gt;</b> element specifies a title for the HTML page, which is shown in the browser's title bar or in the page's tab.</li>
+        <li>The <b>&lt;body&gt;</b> element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.</li>
+	<li>The <b>&lt;h1&gt;</b> and <b><h2></b> element defines headings with different sizes.</li>
+	<li>The <b>&lt;p&gt;</b> element defines a paragraph.</li>
+      </ul>
+    </div>
+
+    <div class="section-box">
+    <h1>HTML Elements</h1>
+    <p style="text-align: center;">The HTMl element is everything from the start tag to the end tag:</p>
+      <div class="subsection-box">
+<pre>
+  <code>
+    <tagname(start tag)>some content</tagname(end tag)>
+  </code>
+</pre>
+      </div>
+    <p style="color: #866C69;"><b>Note:</b> Some HTML elements have no content, such as the <br> element, which is defined for line break. These elements are called empty elements, and do not have an end tag. Otherwise, all elements should be closed properly.</p>
+    </div>
+
+    <div class="section-box">
+    <h1>Web Browsers</h1>
+    <p>The purpose of a web browser (Chrome, Edge, Firefox, Safari) is to read HTML documents and display them correctly in a manner that is interpretable to users.</p>
+    <p>A browser does not display the HTML tags, but uses them to determine how to display the document</p>
+    <p>A simple example of browser display is:</p>
+    <img src="https://www.w3schools.com/html/img_chrome.png" alt="Sample HTML output shown in a browser" style="display: block; width: min(100%, 700px); margin: 14px auto 0 auto; border-radius: 12px; border: 2px solid #D49A56;background-color=">
+    </div>
+
+    <div class="section-box">
+    <h1>HTML Attributes</h1>
+    <p style="text-align: center;">HTML attributes provide <b>additional information</b> about HTML elements.</p>
+    <p style="text-align: center;">They are always specified in the <b>start tag</b> and come in name/value pairs like: <b>name="value"</b>.</p>
+
+    <h2>1. The href Attribute</h2>
+    <p>The <b><a></b> tag defines a hyperlink. The <b><href></b> attribute specifies the URL of the page the link goes to.</p>
+    <h3>Example</h3>
+      <div class="subsection-box">
+<pre>
+  <code>
+<a href="https://www.google.com">Visit Google</a>
+  </code>
+</pre>
+      </div>
+
+    <h2>2. The src Attribute</h2>
+    <p>The <b><img></b> tag is used to embed an image in an HTML page. The <b>src</b> attribute specifies the path to the image to be displayed:</p>
+    <h3>Example</h3>
+      <div class="subsection-box">
+<pre>
+  <code>
+<img src="sample_img.jpg">
+  </code>
+</pre>
+      </div>
+    <p style="color: #866C69;"><b>Note:</b>Links to an image that is hosted within the website uses <b>Relative URL</b>, while links to an external image that is hosted on another website uses <b>Absolute URL</b>.</p>
+
+    <h2>3. The width and height Attribute</h2>
+    <p>The <b><img></b> tag also contain the <b>width</b> and <b>height</b> attributes, which specify the width and height of the image (in pixels):</p>
+    <h3>Example</h3>
+      <div class="subsection-box">
+<pre>
+  <code>
+<img src="sample_img.jpg" width="500px" height="600px">
+  </code>
+</pre>
+      </div>
+
+    <h2>4. The alt Attribute</h2>
+    <p>The required <b>alt</b> attribute for the <b><img></b> tag specifies an alternate text for an image, if the image for some reason cannot be displayed. This can be due to a slow connection, or an error in the <b>src&</b> attribute, or if the user uses a screen reader.</p>
+    <h3>Example</h3>
+      <div class="subsection-box">
+<pre>
+  <code>
+      <img src="sample_img.jpg" alt="this is a sample image">
+  </code>
+</pre>
+      </div>
+
+    <h2>5. The style Attribute</h2>
+    <p>The <b>style</b> attribute is used to add styles to an element, such as color, font, size, and more.</p>
+    <h3>Example</h3>
+      <div class="subsection-box">
+<pre>
+  <code>
+<p style="color: red;">This is a red paragraph.</p>
+  </code>
+</pre>
+      </div>
+
+    <h2>6. The lang Attribute</h2>
+    <p>The <b>lang</b> attribute should always be included inside the <html> tag, to declare the language of the Web page. This is meant to assist search engines and browsers.</p>
+    <h3>Example</h3>
+      <div class="subsection-box">
+<pre>
+  <code>
+<!DOCTYPE html>
+  <html lang="en">
+    <body>
+      ...
+    </body>
+  </html>
+  </code>
+</pre>
+      </div>
+    </div>
+
+  </body>
+
+</html>
