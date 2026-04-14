@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Let'sPassB20</title>
+<style>
+      .background{
+        width: min(900px, 90%);
+        height: auto;
+        opacity: 0.9;
+        position: relative;
+        border-radius: 18px;
+        background-color: #CAD4DF;
+        z-index: 2;
+        margin: 0 auto 36px auto;
+        padding: 24px;
+      }
+      body {
+        position: relative;
+        background: #FBFAF5;
+        z-index: -1;
+        margin: 0;
+        padding: 60px 0;
+      }
+      h1{
+        text-align: center;
+      }
+      p{
+        color: black;
+      }
+      .section-box{
+        width: min(900px, 90%);
+        height: auto;
+        opacity: 0.9;
+        border: 3px solid #EEC95C;
+        border-radius: 18px;
+        padding: 20px;
+        margin: 0 auto 36px auto;
+        background-color: #FBFAF5;
+        height: auto;
+      }
+      .button-row {
+        text-align: center;
+        margin-top: 20px;
+    }
+    </style>
+
+</head>
+
+<body>
+
+<div class="background">
+<h1>Master Your Programming Skills in CSCB20 :) </h1>
+<p style="text-align: center; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+  Welcome to Let'sPassB20, a learning website created to help students build confidence in key CSCB20 programming concepts. 
+  The goal of this platform is to make studying web development more organized, accessible, and effective by <b>combining concept review with opportunities for practice</b>. 
+</p>
+<p style="text-align: center; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+  The website currently includes HTML and CSS, where users can explore review pages and later test their knowledge through quiz features as the project continues to grow.
+</p>
+</div>
+
+<div class="section-box">
+<h1>HTML</h1>
+<h2 style="text-align: center;">Standard language for <i>building</i> webpages</h2>
+
+<div class="button-row">
+  <a href="{{ url_for('html_review') }}">
+    <button type="button">Review Page</button>
+  </a>
+</div>
+
+<div class="button-row">
+  <a href="{{ url_for('html_quiz') }}">
+    <button type="button">Quiz Page</button>
+  </a>
+</div>
+</div>
+
+<div class="section-box">
+<h1>CSS</h1>
+<h2 style="text-align: center;">Standard language for <i>styling</i> webpages</h2>
+
+<div class="button-row">
+  <a href="{{ url_for('css_review') }}">
+    <button type="button">Review Page</button>
+  </a>
+</div>
+
+<div class="button-row">
+  <a href="{{ url_for('css_quiz') }}">
+    <button type="button">Quiz Page</button>
+  </a>
+</div>
+</div>
+
+<div class="button-row">
+<a href="{{ url_for('logout') }}">
+<button type="button">Logout</button>
+</a>
+</div>
+
+</body>
+</html>

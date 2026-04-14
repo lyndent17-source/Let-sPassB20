@@ -1,0 +1,60 @@
+<!Doctype html>
+<html>
+<head>
+  <title>Let'sPassB20 sign in</title>
+  <style>
+    div {
+        width: min(900px, 90%);
+        height: auto;
+        opacity: 0.9;
+      }
+      div.background{
+        position: relative;
+        border-radius: 18px;
+        background-color: #CAD4DF;
+        z-index: 2;
+        margin: 0 auto 36px auto;
+        padding: 24px;
+      }
+      body {
+        position: relative;
+        background: #FBFAF5;
+        z-index: -1;
+        margin: 0;
+        padding: 60px 0;
+      }
+      h1{
+        text-align: center;
+      }
+      p{
+        text-align: center;
+        color: black;
+      }
+  </style>
+</head>
+
+<body>
+  <div class="background">
+    <h1>Welcome to Let'sPassB20!</h1>
+    <p>Please sign in to access the content.</p>
+  </div>
+
+
+<form action="/" method="POST" id="B20-login">
+  <p>
+    Username:
+    <input id="username" name="username" type="text">
+  </p>
+  <p>
+    Password:
+    <input id="password" name="password" type="password">
+  </p>
+
+  <p>
+    <button type="submit">Submit</button>
+  </p>
+
+</form>
+
+</body>
+</html>
