@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Review Page</title>
+<style>
+      div {
+        width: min(900px, 90%);
+        height: auto;
+        opacity: 0.9;
+      }
+      div.background{
+        position: relative;
+        border-radius: 18px;
+        background-color: #CAD4DF;
+        z-index: 2;
+        margin: 0 auto 36px auto;
+        padding: 24px;
+      }
+      body {
+        position: relative;
+        background: #FBFAF5;
+        z-index: -1;
+        margin: 0;
+        padding: 60px 0;
+      }
+      h1{
+        text-align: center;
+      }
+      p{
+        color: black;
+      }
+      .section-box{
+        border: 3px solid #EEC95C;
+        border-radius: 18px;
+        padding: 20px;
+        margin: 0 auto 36px auto;
+        background-color: #FBFAF5;
+        height: auto;
+      }
+      .subsection-box{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        border: 3px solid #D49A56;
+        border-radius: 18px;
+        padding: 20px;
+        margin: 12px auto 20px auto;
+        background-color: #DDDBDE;
+        height: auto;
+      }
+      .subsection-box pre{
+        margin: 0;
+        width: 100%;
+        white-space: pre-wrap;
+      }
+      .subsection-box code{
+        font-family: "Courier New", monospace;
+      }
+
+</style>
+</head>
+<body>
+<div class="background">
+<h1 style="color: black;">Introduction to JavaScript</h1>
+<p style="text-align: center;"><b>JavaScript</b> is the programming language of a Web page.</p>
+<p style="text-align: center;">JavaScript consists of a series of elements, they can calculate, verify and manipulate data in a browser.</p>
+
+</div>
+
+<div class="section-box">
+<h1 style="color: black;">A Sample JavaScript Document</h1>
+<h3>Example</h3>
+
+<div class="subsection-box">
+<pre>
+  <code>
+
+   <!DOCTYPE html>
+   <html>
+   <head>
+   <style>
+   div.example1 {
+      Text-align: center;
+   } 
+   </style>
+   </head>
+   <body>
+   <div class="example1">
+   <p id="demo">This example is JavaScript making changes to HTML content.</p>
+
+   <button type="button" onclick='document.getElementById("demo").innerHTML = "This is JavaScript!"'>Click Me to change the text!</button>
+   </div>
+   </body>
+   </html>
+  
+  </code>
+</pre>
+</div>
+<h3 style="color: #866C69;">Note:</h3>
+      <ul style="color: #866C69;">
+	<li>The common method for utilizing JavaScript is getELemeentById()</li>
+	<li>In this case, this example finds an html element with a matching id, and changes that element.</li>
+	<li>The <b>&lt;script&gt;</b> tag defines that this document is using JavaScript elements.</li>
+	
+        
+      </ul>
+</div>
+
+<div class="section-box">
+<h1 style="color: black;">Sample JavaScript Function</h1>
+<h3>Example</h3>
+
+<div class="subsection-box">
+<p>Function format</p>
+<pre>
+   &lt;script&gt;
+   function myFunction() { # function name with potential parameters
+	document.getElementById('demo').innerHTML = Date() # potential arguments/variables
+	return  # return statement
+	
+	}
+	
+   myFunction() # calling the function	
+   &lt;/script&gt;
+
+   Below is the same example mapped to a button.
+  <code>
+	<!DOCTYPE html>
+	<html>
+	<body>
+	<script>
+	function myFunction() {
+		document.getElementById('demo2').innerHTML = Date()
+	}
+
+	</script>
+
+	<button type="button" onclick=myFunction()>Click me to display Date and Time.</button>
+	
+	<p id="demo2"></p>
+
+	</body>
+	</html> 
+  </code>
+</pre>
+</div>
+<h3 style="color: #866C69;">Note:</h3>
+      <ul style="color: #866C69;">
+	<li>Functions in JavaScript are ways to organize tasks that run when they are called.</li>
+	<li>Functions are declared in <b>&lt;script&gt;</b> tags.</li>
+	<li>The <b>&lt;script&gt;</b> tag defines that this document is using JavaScript elements.</li>
+	<li>Functions can be separated into three sections: Header, Body and Return Statement</li>
+	<li>The <b>function header</b> contains the function name and any potential <b>parameters</b>. <b>Parameters</b> pass values to a function.</li>
+	<li>The <b>function body</b> contains what you want the function to execute.</li>
+	<li>The <b>function return statement</b> contains what is sent back to the function call.</li>
+	
+        
+      </ul>
+</div>
+
+</body>
+</html>
