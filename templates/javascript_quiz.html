@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Quiz - Let'sPassB20</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='quiz.css') }}">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>JavaScript Quiz</h1>
+
+    <div class="quiz-topbar">
+      <div class="timer">Time Left: <span id="time">20</span>s</div>
+      <div class="progress">Question <span id="question-number">1</span></div>
+    </div>
+
+    <div class="question" id="question">Question will appear here</div>
+    <div class="options" id="options"></div>
+
+    <div id="feedback-box" class="feedback-box" style="display: none;">
+      <h3 id="feedback-title"></h3>
+      <p id="feedback-correct-answer"></p>
+      <p id="feedback-explanation-label" style="display: none;"><strong>Explanation</strong></p>
+      <p id="feedback-text"></p>
+    </div>
+
+    <div class="result" id="result" style="display: none;">
+      <h2>Your score: <span id="score">0</span></h2>
+      <p id="final-message"></p>
+    </div>
+
+    <div class="button-row">
+      <button id="next-btn" style="display: none;">Next Question</button>
+      <button id="restart-btn" style="display: none;">Restart Quiz</button>
+      <a href="{{ url_for('home') }}">
+        <button type="button">Back to Home</button>
+      </a>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='javascript_quiz.js') }}"></script>
+</body>
+</html>

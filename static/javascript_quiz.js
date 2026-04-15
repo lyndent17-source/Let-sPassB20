@@ -63,7 +63,47 @@ const quizData = [
     answer: "Return statement"
   },
 
+  {
+    question: "What is the correct JavaScript syntax to change the content of the HTML element below? <p id=\"demo\">This is a demonstration.</p>",
+    options: [
+      "document.getElementById(\"demo\").innerHTML = 'Hello, World!';",
+      "document.getElementByName('demo').innerHTML = 'Hellow, World!';",
+      "#demo.innerHTML = \"Hello, World!\";",
+      "document.getElement(\"p\").innerHTML = \"Hello, World!\";"
+    ],
+    answer: "document.getElementById(\"demo\").innerHTML = 'Hello, World!';"
+  },
 
+  {
+    question: "What is the correct syntax for referring to an external script called \"xxx.js\"?",
+    options: [
+      "<script name=\"xxx.js\">",
+      "<script src=\"xxx.js\">",
+      "<script href=\"xxx.js\">",
+      "<script file=\"xxx.js\">"
+    ],
+    answer: "<script src=\"xxx.js\">"
+  },
+
+  {
+    question: "Which event occurs when the user clicks on an HTML element?",
+    options: [
+      "onchange",
+      "onload",
+      "onclick",
+      "onmouseover"
+    ],
+    answer: "onclick"
+  },
+
+  {
+    question: "Is JavaScript case-sensitive?",
+    options: [
+      "Yes",
+      "No"
+    ],
+    answer: "Yes"
+  }
 ];
 
 let currentQuestion = 0;
