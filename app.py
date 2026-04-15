@@ -51,6 +51,19 @@ def css_quiz():
         return redirect(url_for("login"))
     return render_template("css_quiz.html")
 
+@app.route("/javascript-review")
+def javascript_review():
+    if "username" not in session:
+        return redirect(url_for("login"))
+    return render_template("javascript_review.html")
+
+
+@app.route("/javascript-quiz")
+def javascript_quiz():
+    if "username" not in session:
+        return redirect(url_for("login"))
+    return render_template("javascript_quiz.html")
+
 
 @app.route("/logout")
 def logout():
