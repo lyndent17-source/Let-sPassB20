@@ -1,207 +1,190 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>CSS Content Review</title>
-<style>
-      div {
-        width: min(900px, 90%);
-        height: auto;
-        opacity: 0.9;
+  <title>CSS Content Review</title>
+  <style>
+    div {
+      width: min(900px, 90%);
+      height: auto;
+      opacity: 0.9;
+    }
+    div.background{
+      position: relative;
+      border-radius: 18px;
+      background-color: #CAD4DF;
+      z-index: 2;
+      margin: 0 auto 36px auto;
+      padding: 24px;
+    }
+    body {
+      position: relative;
+      background: #FBFAF5;
+      z-index: -1;
+      margin: 0;
+      padding: 60px 0;
+      font-family: Georgia, serif;
+      color: black;
+    }
+    h1{
+      text-align: center;
+    }
+    p{
+      color: black;
+    }
+    .section-box{
+      border: 3px solid #EEC95C;
+      border-radius: 18px;
+      padding: 20px;
+      margin: 0 auto 36px auto;
+      background-color: #FBFAF5;
+      height: auto;
+    }
+    .subsection-box{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      width: 100%;
+      box-sizing: border-box;
+      border: 3px solid #D49A56;
+      border-radius: 18px;
+      padding: 20px;
+      margin: 12px auto 20px auto;
+      background-color: #DDDBDE;
+      height: auto;
+    }
+    .subsection-box pre{
+      margin: 0;
+      width: 100%;
+      white-space: pre-wrap;
+    }
+    .subsection-box code{
+      font-family: "Courier New", monospace;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background">
+    <h1>Introduction to CSS</h1>
+    <p style="text-align: center;"><b>CSS</b> stands for <b>Cascading Style Sheets.</b></p>
+    <p style="text-align: center;">CSS consists of a series of elements that tell the browser how to design and decorate the content.</p>
+  </div>
+
+  <div class="section-box">
+    <h1>A Sample CSS Document</h1>
+    <h3>Example</h3>
+
+    <div class="subsection-box">
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      div.example {
+        background-color: lightblue;
       }
-      div.background{
-        position: relative;
-        border-radius: 18px;
-        background-color: #CAD4DF;
-        z-index: 2;
-        margin: 0 auto 36px auto;
-        padding: 24px;
-      }
-      body {
-        position: relative;
-        background: #FBFAF5;
-        z-index: -1;
-        margin: 0;
-        padding: 60px 0;
-      }
-      h1{
+
+      h1 {
+        color: white;
         text-align: center;
       }
-      p{
-        color: black;
+
+      p {
+        font-family: verdana;
+        font-size: 20px;
       }
-      .section-box{
-        border: 3px solid #EEC95C;
-        border-radius: 18px;
-        padding: 20px;
-        margin: 0 auto 36px auto;
-        background-color: #FBFAF5;
-        height: auto;
-      }
-      .subsection-box{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        width: 100%;
-        box-sizing: border-box;
-        border: 3px solid #D49A56;
-        border-radius: 18px;
-        padding: 20px;
-        margin: 12px auto 20px auto;
-        background-color: #DDDBDE;
-        height: auto;
-      }
-      .subsection-box pre{
-        margin: 0;
-        width: 100%;
-        white-space: pre-wrap;
-      }
-      .subsection-box code{
-        font-family: "Courier New", monospace;
-      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="example"&gt;
+      &lt;h1&gt;This is a white header&lt;/h1&gt;
+      &lt;p style="text-align: center;"&gt;This is a centered paragraph.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
 
-</style>
-</head>
+    <h3 style="color: #866C69;">Note:</h3>
+    <ul style="color: #866C69;">
+      <li>The <b>&lt;style&gt;</b> tag defines that this document is using CSS rules.</li>
+      <li>CSS rules generally contain a selector and a declaration block.</li>
+      <li>The <b>selector</b> is the element you want the styling to be applied to.</li>
+      <li>The <b>declaration block</b> contains all the properties you want to apply to the element.</li>
+      <li>Every declaration includes a CSS property and value, separated by a colon.</li>
+      <li>Selectors can contain multiple declarations separated by semicolons.</li>
+    </ul>
+  </div>
 
-<body>
-<div class="background">
-<h1 style="color: black;">Introduction to CSS</h1>
-<p  style="text-align: center;"><b>CSS</b> stands for <b>Cascading Style Sheets.</b></p>
-<p style="text-align: center;">CSS consists of a series of elements, they tell the browser how to design and decorate the content.</p>
+  <div class="section-box">
+    <h1 style="color: black;">CSS Selectors</h1>
+    <h3>Example</h3>
 
-</div>
-
-<div class="section-box">
-<h1 style="color: black;">A Sample CSS Document</h1>
-<h3>Example</h3>
-
-<div class="subsection-box">
-<pre>
-  <code>
-
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <style>
-Div.example {
-  background-color: lightblue;
-}
-
+    <div class="subsection-box">
+<pre><code>
 h1 {
-  color: white;
-  text-align: center;
+  color: blue;
 }
 
-p {
-  font-family: verdana;
-  font-size: 20px;
+.example {
+  background-color: lightgray;
 }
-</style>
-</head>
-<body>
-	<div class="example">
-	<h1>This is a white header</h1>
-	<p style="text-align: center;">This is a centered paragraph.</p>
-	</div>
-    </body>
-  </html>
-  
-  </code>
-</pre>
-</div>
 
-<h3 style="color: #866C69;">Note:</h3>
-      <ul style="color: #866C69;">
-	<li>The <b>&lt;style&gt;</b> tag defines that this document is using CSS elements.</li>
-	<li>CSS rules generally contain a selector and declaration block.</li>
-	<li>The <b>selector</b> is the element you want the styling to be applied to.</li>
-	<li>The <b>declaration block</b> contains all the properties you want to apply to the element.</li>
-	<li>Every declaration block includes a CSS property and value, separated by colons.</li>
-	<li>Selectors can contain multiple Declaration blocks separated by semi-colons.</li>
-	
-        
-      </ul>
-    </div>
-<div class="section-box">
-<h1 style="color: black;">CSS Selectors</h1>
-<h3>Example</h3>
-
-<div class="subsection-box">
-<pre>
-  <code>
-
-  
-  </code>
-</pre>
-</div>
-
-<h3 style="color: #866C69;">Note:</h3>
-      <ul style="color: #866C69;">
-	<li>The CSS Box Model is a box that wraps around every HTML element</li>
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
-	
-        
-      </ul>
+#special {
+  font-size: 24px;
+}
+</code></pre>
     </div>
 
-<!-- <p>&lt; blah blah &gt;</p> -->
+    <h3 style="color: #866C69;">Note:</h3>
+    <ul style="color: #866C69;">
+      <li>A selector is used to target HTML elements for styling.</li>
+      <li>An element selector targets all elements of a given type, such as <b>h1</b> or <b>p</b>.</li>
+      <li>A class selector starts with a dot, such as <b>.example</b>.</li>
+      <li>An id selector starts with a hash symbol, such as <b>#special</b>.</li>
+      <li>Selectors help apply different styles to different parts of a webpage.</li>
+    </ul>
+  </div>
 
+  <div class="section-box">
+    <h1 style="color: black;">The Box Model</h1>
+    <h3>Example</h3>
+
+    <div class="subsection-box">
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      div.example1 {
+        background-color: lightblue;
+        width: min(300px, 80%);
+        border: 15px solid green;
+        padding: 50px;
+        margin: 20px;
+        text-align: center;
+        height: auto;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="example1"&gt;
+      &lt;p style="text-align: center;"&gt;This is a box with green borders and a blue background&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+
+    <h3 style="color: #866C69;">Note:</h3>
+    <ul style="color: #866C69;">
+      <li>The CSS Box Model is a box that wraps around every HTML element.</li>
+      <li>It consists of content, padding, border, and margin.</li>
+      <li><b>Padding</b> is the space between the content and the border.</li>
+      <li><b>Border</b> surrounds the padding and content.</li>
+      <li><b>Margin</b> is the space outside the border.</li>
+    </ul>
+  </div>
 </body>
 </html>
-
-<div class="section-box">
-<h1 style="color: black;">The Box Model</h1>
-<h3>Example</h3>
-
-<div class="subsection-box">
-<pre>
-  <code>
-
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <style>
-Div.example1 {
-  background-color: lightblue;
-  width: min(300px, 80%);
-  border: 15px solid green;
-  padding: 50px;
-  margin: 20px;
-  text-align: center; 
-  height: auto;
-}
-</style>
-</head>
-<body>
-
-</style>
-</head>
-<body>
-	<div class="example1">
-	<p style="text-align: center;">This is a box with green borders and a blue background</p>
-
-	</div>
-    </body>
-  </html>
-  
-  </code>
-</pre>
-</div>
-
-<h3 style="color: #866C69;">Note:</h3>
-      <ul style="color: #866C69;">
-	<li>The CSS Box Model is a box that wraps around every HTML element</li>
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
-	
-        
-      </ul>
-    </div>
-
