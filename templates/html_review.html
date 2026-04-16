@@ -75,25 +75,23 @@
     <div class="section-box">
     <h1>A Sample HTML Document</h1>
     <h3>Example</h3>
-      <div class="subsection-box">
-<pre>
-  <code>
 
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <title>Webpage Title</title>
-    </head>
-    <body>
-      <h1>This is the First heading</h1>
-      <h2>This is the Second heading</h2>
-      <p>This is a paragraph</p>
-    </body>
-  </html>
-  
-  </code>
-</pre>
-      </div>
+      <div class="subsection-box">
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Webpage Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;This is the First heading&lt;/h1&gt;
+    &lt;h2&gt;This is the Second heading&lt;/h2&gt;
+    &lt;p&gt;This is a paragraph&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div>
+
     <h3 style="color: #866C69;">Note:</h3>
       <ul style="color: #866C69;">
         <li>The <b>&lt;!DOCTYPE html&gt;</b> declaration defines that this document is a HTML document.</li>
@@ -101,7 +99,7 @@
         <li>The <b>&lt;head&gt;</b> element contains meta information about the HTML page NOT shown to users.</li>
         <li>The <b>&lt;title&gt;</b> element specifies a title for the HTML page, which is shown in the browser's title bar or in the page's tab.</li>
         <li>The <b>&lt;body&gt;</b> element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.</li>
-	<li>The <b>&lt;h1&gt;</b> and <b><h2></b> element defines headings with different sizes.</li>
+	<li>The <b>&lt;h1&gt;</b> and <b>&lt;h2&gt;</b> element defines headings with different sizes.</li>
 	<li>The <b>&lt;p&gt;</b> element defines a paragraph.</li>
       </ul>
     </div>
@@ -109,15 +107,15 @@
     <div class="section-box">
     <h1>HTML Elements</h1>
     <p style="text-align: center;">The HTMl element is everything from the start tag to the end tag:</p>
-      <div class="subsection-box">
-<pre>
-  <code>
-    <tagname(start tag)>some content</tagname(end tag)>
-  </code>
-</pre>
+     
+    <div class="subsection-box">
+<pre><code>
+&lt;tagname&gt;some content&lt;/tagname&gt;
+start tag              end tag
+</code></pre>
       </div>
-    <p style="color: #866C69;"><b>Note:</b> Some HTML elements have no content, such as the <br> element, which is defined for line break. These elements are called empty elements, and do not have an end tag. Otherwise, all elements should be closed properly.</p>
-    </div>
+
+<p style="color: #866C69;"><b>Note:</b> Some HTML elements have no content, such as the <b>&lt;br&gt;</b> element, which is defined for a line break. These elements are called empty elements, and do not have an end tag. Otherwise, all elements should be closed properly.</p>    </div>
 
     <div class="section-box">
     <h1>Web Browsers</h1>
@@ -133,46 +131,39 @@
     <p style="text-align: center;">They are always specified in the <b>start tag</b> and come in name/value pairs like: <b>name="value"</b>.</p>
 
     <h2>1. The href Attribute</h2>
-    <p>The <b><a></b> tag defines a hyperlink. The <b><href></b> attribute specifies the URL of the page the link goes to.</p>
-    <h3>Example</h3>
+<p>The <b>&lt;a&gt;</b> tag defines a hyperlink. The <b>href</b> attribute specifies the URL of the page the link goes to.</p>    <h3>Example</h3>
       <div class="subsection-box">
-<pre>
-  <code>
-<a href="https://www.google.com">Visit Google</a>
-  </code>
-</pre>
+<pre><code>
+&lt;a href="https://www.google.com"&gt;Visit Google&lt;/a&gt;
+</code></pre>
       </div>
 
     <h2>2. The src Attribute</h2>
-    <p>The <b><img></b> tag is used to embed an image in an HTML page. The <b>src</b> attribute specifies the path to the image to be displayed:</p>
+    <p>The <b>&lt;img&gt;</b> tag is used to embed an image in an HTML page. The <b>src</b> attribute specifies the path to the image to be displayed:</p>
     <h3>Example</h3>
       <div class="subsection-box">
-<pre>
-  <code>
-<img src="sample_img.jpg">
-  </code>
-</pre>
+&lt;img src="sample_img.jpg"&gt;
       </div>
     <p style="color: #866C69;"><b>Note:</b>Links to an image that is hosted within the website uses <b>Relative URL</b>, while links to an external image that is hosted on another website uses <b>Absolute URL</b>.</p>
 
     <h2>3. The width and height Attribute</h2>
-    <p>The <b><img></b> tag also contain the <b>width</b> and <b>height</b> attributes, which specify the width and height of the image (in pixels):</p>
+    <p>The <b>&lt;img&gt;</b> tag also contain the <b>width</b> and <b>height</b> attributes, which specify the width and height of the image (in pixels):</p>
     <h3>Example</h3>
       <div class="subsection-box">
 <pre>
   <code>
-<img src="sample_img.jpg" width="500px" height="600px">
+&lt;img src="sample_img.jpg" width="500px" height="600px"&gt;
   </code>
 </pre>
       </div>
 
     <h2>4. The alt Attribute</h2>
-    <p>The required <b>alt</b> attribute for the <b><img></b> tag specifies an alternate text for an image, if the image for some reason cannot be displayed. This can be due to a slow connection, or an error in the <b>src&</b> attribute, or if the user uses a screen reader.</p>
+    <p>The required <b>alt</b> attribute for the <b>&lt;img&gt;</b> tag specifies an alternate text for an image, if the image for some reason cannot be displayed. This can be due to a slow connection, or an error in the <b>src</b> attribute, or if the user uses a screen reader.</p>
     <h3>Example</h3>
       <div class="subsection-box">
 <pre>
   <code>
-      <img src="sample_img.jpg" alt="this is a sample image">
+      &lt;img src="sample_img.jpg" alt="this is a sample image"&gt;
   </code>
 </pre>
       </div>
@@ -181,27 +172,22 @@
     <p>The <b>style</b> attribute is used to add styles to an element, such as color, font, size, and more.</p>
     <h3>Example</h3>
       <div class="subsection-box">
-<pre>
-  <code>
-<p style="color: red;">This is a red paragraph.</p>
-  </code>
-</pre>
+<pre><code>
+&lt;p style="color: red;"&gt;This is a red paragraph.&lt;/p&gt;
+</code></pre>
       </div>
 
     <h2>6. The lang Attribute</h2>
-    <p>The <b>lang</b> attribute should always be included inside the <html> tag, to declare the language of the Web page. This is meant to assist search engines and browsers.</p>
-    <h3>Example</h3>
+<p>The <b>lang</b> attribute should always be included inside the <b>&lt;html&gt;</b> tag, to declare the language of the web page. This is meant to assist search engines and browsers.</p>    <h3>Example</h3>
       <div class="subsection-box">
-<pre>
-  <code>
-<!DOCTYPE html>
-  <html lang="en">
-    <body>
-      ...
-    </body>
-  </html>
-  </code>
-</pre>
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;body&gt;
+    ...
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
       </div>
     </div>
 
