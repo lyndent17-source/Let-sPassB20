@@ -61,6 +61,17 @@
     .subsection-box code{
       font-family: "Courier New", monospace;
     }
+    .box-model-preview {
+      background-color: lightblue;
+      width: min(300px, 80%);
+      border: 15px solid green;
+      padding: 50px;
+      margin: 20px auto;
+      text-align: center;
+      height: auto;
+      opacity: 1;
+      box-sizing: content-box;
+    }
   </style>
 </head>
 
@@ -152,30 +163,10 @@ h1 {
     <h3>Example</h3>
 
     <div class="subsection-box">
-<pre><code>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;style&gt;
-      div.example1 {
-        background-color: lightblue;
-        width: min(300px, 80%);
-        border: 15px solid green;
-        padding: 50px;
-        margin: 20px;
-        text-align: center;
-        height: auto;
-      }
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div class="example1"&gt;
-      &lt;p style="text-align: center;"&gt;This is a box with green borders and a blue background&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-    </div>
+      <div class="box-model-preview">
+        <p style="text-align: center;">This is a box with green borders and a blue background</p>
+      </div>
+      </div>
 
     <h3 style="color: #866C69;">Note:</h3>
     <ul style="color: #866C69;">
