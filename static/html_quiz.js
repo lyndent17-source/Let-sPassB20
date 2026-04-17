@@ -86,23 +86,28 @@ function startTimer() {
   timeLeft = 20;
   timeEl.textContent = timeLeft;
 
-  timer = setInterval(() => {
+  timer = setInterval(() => { /* setInterval runs the given function repeatedly
+here, it runs every 1000 milliseconds, which is 1 second*/
     timeLeft--;
-    timeEl.textContent = timeLeft;
+    timeEl.textContent = timeLeft; /* after decreasing the number, this updates the display again so the page shows the remaining time*/
 
     if (timeLeft <= 0) {
-      clearInterval(timer);
+      clearInterval(timer); /* once time is up, stop the repeating interval*/
       lockQuestion();
-      nextBtn.style.display = "inline-block";
+      nextBtn.style.display = "inline-block"; /*shows the next question btn*/
     }
   }, 1000);
 }
 
 function loadQuestion() {
+  /*The loadQuestion function refreshes the interface for the current question. 
+  It removes old state from the previous question, checks whether the quiz is over, 
+  displays the next question and its answer options, and then starts the countdown timer.*/
   clearInterval(timer);
   selectedAnswer = null;
   nextBtn.style.display = "none";
 
+  /*Reset old feedback*/
   feedbackBox.style.display = "none";
   feedbackTitle.textContent = "";
   feedbackCorrectAnswer.textContent = "";
@@ -110,43 +115,50 @@ function loadQuestion() {
   feedbackExplanationLabel.style.display = "none";
   feedbackBox.classList.remove("feedback-wrong");
 
+  /*Check whether the quiz is finished*/
   if (currentQuestion >= quizData.length) {
     endQuiz();
     return;
   }
 
+  /*Load the current question data*/
   const q = quizData[currentQuestion];
   questionNumberEl.textContent = currentQuestion + 1;
   questionEl.textContent = q.question;
   optionsEl.innerHTML = "";
 
+  /*Create option buttons*/
   q.options.forEach(option => {
     const btn = document.createElement("button");
     btn.className = "option-btn";
     btn.textContent = option;
     btn.addEventListener("click", () => handleAnswer(btn, option));
-    optionsEl.appendChild(btn);
+    optionsEl.appendChild(btn); /*This adds the newly created button into the options container on the page.
+Without this line, the button would exist in memory but would not appear on screen.*/
   });
 
   startTimer();
 }
 
 function handleAnswer(button, option) {
+  /*The handleAnswer function processes the user’s selected answer, stops further interaction with the question, 
+  updates the visual feedback, and prepares the quiz to move to the next question*/
   if (selectedAnswer !== null) return;
 
   selectedAnswer = option;
-  clearInterval(timer);
+  clearInterval(timer); /*stops the countdown timer as soon as the user answers*/
 
   const current = quizData[currentQuestion];
   const correctAnswer = current.answer;
   const explanation = current.explanation;
-  const buttons = document.querySelectorAll(".option-btn");
+  const buttons = document.querySelectorAll(".option-btn"); /*selects all option buttons so we can disable them appropriately*/
 
+  /*loops through all option buttons*/
   buttons.forEach(btn => {
     btn.disabled = true;
 
     if (btn.textContent === correctAnswer) {
-      btn.classList.add("correct");
+      btn.classList.add("correct"); /*if correct answer, the button gets the CSS class correct which styles the correct answer in green*/
     }
 
     if (btn.textContent === option && option !== correctAnswer) {
@@ -156,13 +168,13 @@ function handleAnswer(button, option) {
 
   if (option === correctAnswer) {
     score++;
-  } else if (explanation) {
+  } else if (explanation) { /*if the answer is wrong, this checks whether the question has an explanation*/
     feedbackTitle.textContent = "Incorrect Answer!";
     feedbackCorrectAnswer.textContent = `Correct answer: ${correctAnswer}`;
     feedbackText.textContent = explanation;
-    feedbackExplanationLabel.style.display = "block";
-    feedbackBox.style.display = "block";
-    feedbackBox.classList.add("feedback-wrong");
+    feedbackExplanationLabel.style.display = "block"; /*shows the explanation label*/
+    feedbackBox.style.display = "block"; /*makes the feedback box visible*/
+    feedbackBox.classList.add("feedback-wrong"); /*add styling for wrong answer feedback*/
   }
 
   nextBtn.style.display = "inline-block";
@@ -177,13 +189,14 @@ function lockQuestion() {
   const buttons = document.querySelectorAll(".option-btn");
 
   buttons.forEach(btn => {
-    btn.disabled = true;
+    btn.disabled = true; /*this disables every answer button. if time is up the user should not still be allowed to answer*/
     if (btn.textContent === correctAnswer) {
+      /*checks if current button's text content matches the correct answer*/
       btn.classList.add("correct");
     }
   });
 
-  if (explanation) {
+  if (explanation) { /*checks whether the current question has explanation text*/
     feedbackTitle.textContent = "Time's up!";
     feedbackCorrectAnswer.textContent = `Correct answer: ${correctAnswer}`;
     feedbackText.textContent = explanation;
@@ -196,14 +209,19 @@ function lockQuestion() {
 }
 
 function endQuiz() {
+  /*runs when there are no more questions left. it stops the quiz interface and switch the page into result page*/
   clearInterval(timer);
+
+  /*hides all quiz interfaces */
   questionEl.style.display = "none";
   optionsEl.style.display = "none";
   nextBtn.style.display = "none";
+  /*shows all result interfaces*/
   resultEl.style.display = "block";
   restartBtn.style.display = "inline-block";
   scoreEl.textContent = `${score} / ${quizData.length}`;
 
+  /*choose a final message based on the user's score*/
   if (score === quizData.length) {
     finalMessageEl.textContent = "Excellent work!";
   } else if (score >= 3) {
